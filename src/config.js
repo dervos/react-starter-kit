@@ -22,10 +22,16 @@ export const analytics = {
 
 export const auth = {
 
+  flickr: {
+    api_key: process.env.flickr_api_key || 'af4d24cd27e197422dfacb2d7f318ffb',
+    secret: process.env.flickr_secret || 'bc51224771c35897',
+    user_id: process.env.flickr_user_id || '42020927@N04',
+  },
+
   // https://developers.facebook.com/
   facebook: {
-    id: process.env.FACEBOOK_ID || '183246425378777',
-    secret: process.env.FACEBOOK_SECRET || 'cb2b201f0249d15454221cbf00d6ff99',
+    id: process.env.facebook_id || '183246425378777',
+    secret: process.env.facebook_secret || 'cb2b201f0249d15454221cbf00d6ff99',
   },
 
   // https://cloud.google.com/console/project
