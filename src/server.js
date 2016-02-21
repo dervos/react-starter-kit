@@ -20,6 +20,13 @@ import { port } from './config';
 const server = global.server = express();
 
 //
+// Tell any CSS tooling (such as Material UI) to use all vendor prefixes if the
+// user agent is not known.
+// -----------------------------------------------------------------------------
+global.navigator = global.navigator || {};
+global.navigator.userAgent = global.navigator.userAgent || 'all';
+
+//
 // Register Node.js middleware
 // -----------------------------------------------------------------------------
 server.use(express.static(path.join(__dirname, 'public')));
@@ -39,9 +46,9 @@ server.get('*', async (req, res, next) => {
     const css = [];
     const context = {
       insertCss: styles => css.push(styles._getCss()),
-      onSetTitle: value => data.title = value,
-      onSetMeta: (key, value) => data[key] = value,
-      onPageNotFound: () => statusCode = 404,
+      onSetTitle: value => (data.title = value),
+      onSetMeta: (key, value) => (data[key] = value),
+      onPageNotFound: () => (statusCode = 404),
     };
 
     await Router.dispatch({ path: req.path, query: req.query, context }, (state, component) => {
