@@ -22,9 +22,19 @@ export const analytics = {
 
 };
 
+
 export const auth = {
 
   jwt: { secret: process.env.JWT_SECRET || 'React Starter Kit' },
+
+
+  FLICKR: {
+    api_key: 'af4d24cd27e197422dfacb2d7f318ffb',
+    secret: 'bc51224771c35897',
+    user_id: '42020927@N04',
+    access_token: '72157663076434894-09a8bb781c621dd9',
+    access_token_secret: '6f5d678ff8d8e51a',
+  },
 
   // https://developers.facebook.com/
   facebook: {
