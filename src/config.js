@@ -28,12 +28,13 @@ export const auth = {
   jwt: { secret: process.env.JWT_SECRET || 'React Starter Kit' },
 
 
-  FLICKR: {
-    api_key: 'af4d24cd27e197422dfacb2d7f318ffb',
-    secret: 'bc51224771c35897',
-    user_id: '42020927@N04',
-    access_token: '72157663076434894-09a8bb781c621dd9',
-    access_token_secret: '6f5d678ff8d8e51a',
+  flickr: {
+    api_key: process.env.KEY,
+    secret: process.env.SECRET,
+    user_id: process.env.USER_ID,
+    access_token: process.env.OAUTH_TOKEN,
+    access_token_secret: process.env.OAUTH_TOKEN_SECRET,
+    oauth_verifier: process.env.OAUTH_VERIFIER,
   },
 
   // https://developers.facebook.com/

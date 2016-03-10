@@ -69,6 +69,7 @@ const config = {
         test: /\.jsx?$/,
         include: [
           path.resolve(__dirname, '../node_modules/react-routing/src'),
+          path.resolve(__dirname, '../node_modules/flickrapi/browser/'),
           path.resolve(__dirname, '../src'),
         ],
         loader: 'babel-loader',

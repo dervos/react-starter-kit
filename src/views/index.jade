@@ -11,6 +11,7 @@ html(class="no-js", lang="")
   body
     #app!= body
     script(src=entry)
+    script(src='flickrapi.dev.js')
     script.
       window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
       ga('create','#{trackingId}','auto');ga('send','pageview')
